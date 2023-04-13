@@ -2,6 +2,20 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
+        <!-- comp_cd -->
+        <div>
+            <x-input-label for="comp_cd" :value="__('compCd')" />
+            <x-text-input id="comp_cd" class="block mt-1 w-full" type="text" name="comp_cd" :value="old('comp_cd')" required autofocus autocomplete="comp_cd" />
+            <x-input-error :messages="$errors->get('comp_cd')" class="mt-2" />
+        </div>
+
+        <!-- emp_cd -->
+        <div>
+            <x-input-label for="emp_cd" :value="__('empCd')" />
+            <x-text-input id="emp_cd" class="block mt-1 w-full" type="text" name="emp_cd" :value="old('emp_cd')" required autofocus autocomplete="emp_cd" />
+            <x-input-error :messages="$errors->get('emp_cd')" class="mt-2" />
+        </div>
+
         <!-- Name -->
         <div>
             <x-input-label for="name" :value="__('Name')" />
